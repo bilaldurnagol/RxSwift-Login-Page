@@ -60,58 +60,64 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+I did this project to learn Reactive Programming. In this project, I did email validation and password validation using Rx Swift. If the user enters their email and password properly, they will be able to login.
 
 Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+* To learn RxSwift and reactive programming.
+* To take my programming knowledge to the next level. :smile:
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+The frameworks I used in this project are listed below.
+* [RxSwift](https://github.com/ReactiveX/RxSwift)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+ This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Requirements
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Xcode 12.x
+* Swift 5.x
+
+For Xcode 11 and below, [use RxSwift 5.x](https://github.com/ReactiveX/RxSwift/releases/tag/5.1.1).
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+RxSwift doesn't contain any external dependencies.
 
+These are currently the supported installation options:
 
+### Manual
 
+Open Rx.xcworkspace, choose `RxExample` and hit run. This method will build everything and run the sample app
+
+### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
+
+```ruby
+# Podfile
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+    pod 'RxSwift', '6.1.0'
+    pod 'RxCocoa', '6.1.0'
+end
+
+# RxTest and RxBlocking make the most sense in the context of unit/integration tests
+target 'YOUR_TESTING_TARGET' do
+    pod 'RxBlocking', '6.1.0'
+    pod 'RxTest', '6.1.0'
+end
+```
+
+Replace `YOUR_TARGET_NAME` and then, in the `Podfile` directory, type:
+
+```bash
+$ pod install
+```
 <!-- USAGE EXAMPLES -->
 ## Usage
 
