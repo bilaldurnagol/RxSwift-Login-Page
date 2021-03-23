@@ -121,9 +121,28 @@ $ pod install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+<table>
+  <tr>
+    <th width="30%">Here's an example</th>
+  </tr>
+  <tr>
+    <td>Define search for GitHub repositories ...</td>
+  </tr>
+  <tr>
+    <td><div class="highlight highlight-source-swift"><pre>
+let searchResults = searchBar.rx.text.orEmpty
+    .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+    .distinctUntilChanged()
+    .flatMapLatest { query -> Observable&lt;[Repository]&gt; in
+        if query.isEmpty {
+            return .just([])
+        }
+        return searchGitHub(query)
+            .catchAndReturn([])
+    }
+    .observe(on: MainScheduler.instance)</pre></div></td>
+  </tr>
+</table>
 
 
 
