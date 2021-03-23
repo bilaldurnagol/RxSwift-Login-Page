@@ -1,4 +1,10 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/bilaldurnagol/RxSwift-Login-Page/total?logo=Github&style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/bilaldurnagol/RxSwift-Login-Page)
+![GitHub followers](https://img.shields.io/github/followers/bilaldurnagol?style=social)
+![GitHub forks](https://img.shields.io/github/forks/bilaldurnagol/RxSwift-Login-Page?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/bilaldurnagol/RxSwift-Login-Page?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/bilaldurnagol/RxSwift-Login-Page?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/bilaldurnagol?style=social)
 
 <!-- PROJECT LOGO -->
 <br />
