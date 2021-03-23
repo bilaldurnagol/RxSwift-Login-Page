@@ -58,9 +58,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 I did this project to learn Reactive Programming. In this project, I did email validation and password validation using Rx Swift. If the user enters their email and password properly, they will be able to login.
+
+   <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/screenshot-2.png" alt="Logo" width="300" height="600">
+  </a>
+
+   <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/screenshot-3.png" alt="Logo" width="300" height="600">
+  </a>
+  
+   <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/screenshot-1.png" alt="Logo" width="300" height="600">
+  </a>
+
 
 Here's why:
 * To learn RxSwift and reactive programming.
