@@ -9,9 +9,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">Login Page RxSwift</h3>
 
@@ -60,15 +57,15 @@
 
 I did this project to learn Reactive Programming. In this project, I did email validation and password validation using Rx Swift. If the user enters their email and password properly, they will be able to login.
 
-   <a href="https://github.com/othneildrew/Best-README-Template">
+   <a href="https://github.com/bilaldurnagol/RxSwift-Login-Page">
     <img src="images/screenshot-2.png" alt="Logo" width="300" height="600">
   </a>
 
-   <a href="https://github.com/othneildrew/Best-README-Template">
+   <a href="https://github.com/bilaldurnagol/RxSwift-Login-Page">
     <img src="images/screenshot-3.png" alt="Logo" width="300" height="600">
   </a>
   
-   <a href="https://github.com/othneildrew/Best-README-Template">
+   <a href="https://github.com/bilaldurnagol/RxSwift-Login-Page">
     <img src="images/screenshot-1.png" alt="Logo" width="300" height="600">
   </a>
 
