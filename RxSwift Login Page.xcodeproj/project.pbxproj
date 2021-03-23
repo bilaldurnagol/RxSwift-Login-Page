@@ -14,6 +14,9 @@
 		B5187BA0260885F900497E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5187B9E260885F900497E33 /* LaunchScreen.storyboard */; };
 		B5187BB42608890500497E33 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5187BB32608890500497E33 /* LoginVC.swift */; };
 		B5187BB72608898E00497E33 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5187BB62608898E00497E33 /* AppCoordinator.swift */; };
+		B5A4687B260A090000A0D62D /* screenshot-3.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A46878260A090000A0D62D /* screenshot-3.png */; };
+		B5A4687C260A090000A0D62D /* screenshot-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A46879260A090000A0D62D /* screenshot-1.png */; };
+		B5A4687D260A090000A0D62D /* screenshot-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A4687A260A090000A0D62D /* screenshot-2.png */; };
 		C6FBDBD79BE9DE8A574D90E5 /* Pods_RxSwift_Login_Page.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4928DD82FD97D61F9AACF3F6 /* Pods_RxSwift_Login_Page.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		B5187BA1260885F900497E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5187BB32608890500497E33 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B5187BB62608898E00497E33 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B5A46878260A090000A0D62D /* screenshot-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-3.png"; sourceTree = "<group>"; };
+		B5A46879260A090000A0D62D /* screenshot-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-1.png"; sourceTree = "<group>"; };
+		B5A4687A260A090000A0D62D /* screenshot-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-2.png"; sourceTree = "<group>"; };
 		B63F9405F71AC83BD22EABE6 /* Pods-RxSwift Login Page.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift Login Page.release.xcconfig"; path = "Target Support Files/Pods-RxSwift Login Page/Pods-RxSwift Login Page.release.xcconfig"; sourceTree = "<group>"; };
 		B7D8F42B9FBB8D7F9CEFD7FE /* Pods-RxSwift Login Page.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift Login Page.debug.xcconfig"; path = "Target Support Files/Pods-RxSwift Login Page/Pods-RxSwift Login Page.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,7 @@
 		B5187B92260885F800497E33 /* RxSwift Login Page */ = {
 			isa = PBXGroup;
 			children = (
+				B5A46877260A08B700A0D62D /* Images */,
 				B5187B93260885F800497E33 /* AppDelegate.swift */,
 				B5187B95260885F800497E33 /* SceneDelegate.swift */,
 				B5187B99260885F800497E33 /* Main.storyboard */,
@@ -92,6 +99,16 @@
 				B5187BB62608898E00497E33 /* AppCoordinator.swift */,
 			);
 			path = "RxSwift Login Page";
+			sourceTree = "<group>";
+		};
+		B5A46877260A08B700A0D62D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B5A46879260A090000A0D62D /* screenshot-1.png */,
+				B5A4687A260A090000A0D62D /* screenshot-2.png */,
+				B5A46878260A090000A0D62D /* screenshot-3.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A4687D260A090000A0D62D /* screenshot-2.png in Resources */,
 				B5187BA0260885F900497E33 /* LaunchScreen.storyboard in Resources */,
+				B5A4687B260A090000A0D62D /* screenshot-3.png in Resources */,
 				B5187B9D260885F900497E33 /* Assets.xcassets in Resources */,
+				B5A4687C260A090000A0D62D /* screenshot-1.png in Resources */,
 				B5187B9B260885F800497E33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
