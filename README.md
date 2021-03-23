@@ -50,8 +50,6 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -126,44 +124,19 @@ $ pod install
     <th width="30%">Here's an example</th>
   </tr>
   <tr>
-    <td>Define search for GitHub repositories ...</td>
+    <td>Email validation ...</td>
   </tr>
   <tr>
     <td><div class="highlight highlight-source-swift"><pre>
-let searchResults = searchBar.rx.text.orEmpty
-    .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-    .distinctUntilChanged()
-    .flatMapLatest { query -> Observable&lt;[Repository]&gt; in
-        if query.isEmpty {
-            return .just([])
-        }
-        return searchGitHub(query)
-            .catchAndReturn([])
-    }
-    .observe(on: MainScheduler.instance)</pre></div></td>
+        let emailValid = emailTextField
+            .rx
+            .text
+            .orEmpty
+            .throttle(.milliseconds(1000), scheduler: MainScheduler.instance)
+            .map{self.validateEmail(candidate: $0)}
+            .share(replay: 1)
   </tr>
 </table>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 
 
 <!-- LICENSE -->
@@ -175,28 +148,26 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
+   <a href="https://twitter.com/bilaldurnagol">
+  <img align="left" alt="Bilal Durnagöl | Twitter" width="21px" src="https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/twitter.svg"/>
+</a>
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+   <a href="https://medium.com/@BilalDurnagol">
+  <img align="left" alt="Bilal Durnagöl | Medium" width="21px" src="https://github.com/leungwensen/svg-icon/blob/master/dist/svg/logos/medium.svg"/>
+</a>
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+   <a href="https://www.instagram.com/bilaldurnagol/">
+  <img align="left" alt="Bilal Durnagöl | Instagram" width="21px" src="https://github.com/shgysk8zer0/logos/blob/master/instagram.svg"/>
+</a>
 
+   <a href="https://www.linkedin.com/in/bilaldurnagol">
+  <img align="left" alt="Bilal Durnagöl | LinkedIn" width="21px" src="https://github.com/shgysk8zer0/logos/blob/master/linkedin.svg"/>
+</a>
+<br/>
+<br/>
+  
 
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
+Project Link: [https://github.com/bilaldurnagol/RxSwift-Login-Page](https://github.com/bilaldurnagol/RxSwift-Login-Page)
 
 
 
