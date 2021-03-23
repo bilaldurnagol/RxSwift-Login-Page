@@ -58,9 +58,12 @@ class LoginVC: UIViewController {
         button.backgroundColor = .systemGreen
         button.setTitleColor(UIColor.white, for: .normal)
         button.layer.cornerRadius = 8
+        button.isEnabled = true
         return button
     }()
     let disposeBag = DisposeBag()
+    
+    var isOK = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,10 +73,9 @@ class LoginVC: UIViewController {
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
         view.addSubview(titleLabel)
-        
-        loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
 
-        
+        //validate email
         let emailValid = emailTextField
             .rx
             .text
@@ -81,21 +83,29 @@ class LoginVC: UIViewController {
             .throttle(.milliseconds(1000), scheduler: MainScheduler.instance)
             .map{self.validateEmail(candidate: $0)}
             .share(replay: 1)
-        
+        //validate password
         let passValid = passwordTextField
             .rx
             .text
             .orEmpty
-            .throttle(.milliseconds(3000), scheduler: MainScheduler.instance)
+            .throttle(.milliseconds(1000), scheduler: MainScheduler.instance)
             .map{self.validatePassword(candidate: $0)}
             .share(replay: 1)
         
+        
+        //merge password and email control
         let everythingValid = Observable
             .combineLatest(emailValid, passValid) { $0 && $1}
             .debug("everythingValid", trimOutput: true)
             .share(replay: 1)
         
+        everythingValid.subscribe(onNext: {
+            self.isOK = $0
+        }).disposed(by: disposeBag)
         
+        
+        
+        //show checkmark in emailtextfield
         emailValid
             .map{ return $0}
             .subscribe(onNext: {
@@ -116,7 +126,8 @@ class LoginVC: UIViewController {
                     spinner.startAnimating()
                 }
             }).disposed(by: disposeBag)
-        
+     
+        //show checkmark in passwordtextfield
         passValid
             .map{ return $0}
             .subscribe(onNext: {
@@ -176,10 +187,39 @@ class LoginVC: UIViewController {
         return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: candidate)
     }
     
-    
-    //MARK:- Objc funcs
-    
-    @objc private func didTapLoginButton() {
-        
+    //MARK:- Objc func
+    @objc private func didTapButton() {
+        if isOK {
+            customAlert(alertAction: AlertAction(title: "Congratulations", message: "You are logged in.", style: .default)).subscribe(onNext: {_ in
+                
+            }).disposed(by: disposeBag)
+        }else {
+            customAlert(alertAction: AlertAction(title: "Sorry", message: "Check the information you entered.", style: .default)).subscribe(onNext: {_ in
+                
+            }).disposed(by: disposeBag)
+        }
     }
+}
+
+
+extension LoginVC {
+    private func customAlert(alertAction: AlertAction) -> Observable<UIAlertController> {
+        return Observable<UIAlertController>.create{ observer in
+            let alert = UIAlertController(title: alertAction.title, message: alertAction.message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: alertAction.style, handler: {_ in
+                self.dismiss(animated: true, completion: nil)
+            })
+            observer.onNext(alert)
+            observer.onCompleted()
+            alert.addAction(action)
+            self.present(alert, animated: true)
+            return Disposables.create()
+        }
+    }
+}
+
+struct AlertAction {
+    let title: String
+    let message: String
+    let style: UIAlertAction.Style
 }
