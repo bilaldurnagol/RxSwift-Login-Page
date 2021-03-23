@@ -70,6 +70,7 @@
 		B5187B87260885F800497E33 = {
 			isa = PBXGroup;
 			children = (
+				B5A46877260A08B700A0D62D /* images */,
 				B5187B92260885F800497E33 /* RxSwift Login Page */,
 				B5187B91260885F800497E33 /* Products */,
 				456732771C19C05A94B306FC /* Pods */,
@@ -88,7 +89,6 @@
 		B5187B92260885F800497E33 /* RxSwift Login Page */ = {
 			isa = PBXGroup;
 			children = (
-				B5A46877260A08B700A0D62D /* Images */,
 				B5187B93260885F800497E33 /* AppDelegate.swift */,
 				B5187B95260885F800497E33 /* SceneDelegate.swift */,
 				B5187B99260885F800497E33 /* Main.storyboard */,
@@ -101,14 +101,14 @@
 			path = "RxSwift Login Page";
 			sourceTree = "<group>";
 		};
-		B5A46877260A08B700A0D62D /* Images */ = {
+		B5A46877260A08B700A0D62D /* images */ = {
 			isa = PBXGroup;
 			children = (
 				B5A46879260A090000A0D62D /* screenshot-1.png */,
 				B5A4687A260A090000A0D62D /* screenshot-2.png */,
 				B5A46878260A090000A0D62D /* screenshot-3.png */,
 			);
-			path = Images;
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
